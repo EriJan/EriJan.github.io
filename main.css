@@ -1,0 +1,24 @@
+header {
+    color: #808080;
+    font-size: 1em;
+    padding:5px;
+    text-align:center;
+    text-transform: uppercase;
+}   
+
+
+
+h1 {
+    font-size:3em;
+    text-align:center;
+    padding:5px; 
+}
+
+p {
+    font-size:1em;
+    text-align:justify;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
