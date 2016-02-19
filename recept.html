@@ -7,6 +7,8 @@
     </head>
 
     <body>
+        
+        
         <header>
             <h1>Recept på Mazarintårta.</h1>
             <img src="http://www.kungsornen.se/Global/Recept/hsb/mazarintarta-hela-kandis-sverige-bakar.jpg" alt="En smarrig Mazrintårta på rosa fat." style="width:839px;height:422px;"> 
@@ -17,6 +19,11 @@
         </nav>
         <aside>
             <h2>Ingredienser</h2>
+            <label>
+                Antal tårtor:
+                <input type = "number" id="numCakes" value="1" min="1" max="10" step="1">
+            </label>
+                
             <h3>Mördeg:</h3>
             <ul>
                 <li>300 g vetemjöl</li>
@@ -35,18 +42,18 @@
                 <li>Ca 2 msk vatten</li>
             </ul>   
         </aside>
+        <article>
+            <h2> Så här lagar du Mazarintårta:</h2>    
+            <ol>
+                <li>Mördeg: Blanda ihop mördegsingredienserna till en deg och förvara i kylen. Kavla ut degen och klä en form.</li>
+                <li>Mazarinmassa: Blanda mandelmassa och smör klumpfritt. Blanda i ägg, överarbeta inte.</li>
+                <li>Fyll mördegsformen med massa. Baka i 180 grader i 20-40 minuter. Låt svalna helt.</li>
+                <li>Glasyr: Lös upp florsocker med vatten. Glasera mazarintårtan.</li>
+            </ol>
+        </article>
+        <script src="recept.js"></script>
+        <script>
         
-       
-            <article>
-                 <h2> Så här lagar du Mazarintårta:</h2>    
-                <ol>
-                    <li>Mördeg: Blanda ihop mördegsingredienserna till en deg och förvara i kylen. Kavla ut degen och klä en form.</li>
-                    <li>Mazarinmassa: Blanda mandelmassa och smör klumpfritt. Blanda i ägg, överarbeta inte.</li>
-                    <li>Fyll mördegsformen med massa. Baka i 180 grader i 20-40 minuter. Låt svalna helt.</li>
-                    <li>Glasyr: Lös upp florsocker med vatten. Glasera mazarintårtan.</li>
-                </ol>
-
-            </article>
-        
+        </script>
     </body>   
 </html>
