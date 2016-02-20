@@ -55,4 +55,15 @@ window.onload = function () {
         }
     }
 };
-
+// source http://api.jquery.com/hover/
+$(document).ready(function () {
+    $(".votingStars span").hover(
+        function () {
+            $(this).prevAll().text("\u2605");
+            $(this).text("\u2605");
+        }, function () {
+            $(this).prevAll().text("\u2606");
+             $(this).text("\u2606");
+        }
+    );
+});
