@@ -1,4 +1,3 @@
-
 var baseIngr = [];
 // var cakeCount;
 
@@ -57,13 +56,25 @@ window.onload = function () {
 };
 // source http://api.jquery.com/hover/
 $(document).ready(function () {
-    $(".votingStars span").hover(
+/*    $(".votingStars span").hover(
         function () {
             $(this).prevAll().text("\u2605");
             $(this).text("\u2605");
         }, function () {
             $(this).prevAll().text("\u2606");
-             $(this).text("\u2606");
+            $(this).text("\u2606");
+        }
+    );*/
+    
+    $(".votingStars span").click(
+        function () {
+            $(this).prevAll().text("\u2605");
+            $(this).text("\u2605");
+            $(this).nextAll().text("\u2606");
+            
+            $(this).animate({fontSize: '5em'}, "slow");
+            $(this).animate({fontSize: '1em'}, "slow");
         }
     );
+    
 });

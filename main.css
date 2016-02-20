@@ -64,15 +64,15 @@ li {
 }
 
 .votingStars {
-    
     font-size:3em;
     text-align:center;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 0px;
     margin-left: 0px;
+ 
 }
 
-.votingStars span {
+.votingStars  span {
     cursor: pointer;
 }
