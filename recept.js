@@ -22,6 +22,10 @@ function updateRecipe() {
     "use strict";
     var i, numCakes, asideElement, ingrList;
     numCakes = document.getElementById("numCakes").value;
+    if (numCakes < 1 || numCakes > 10) {
+        numCakes = 1;
+        document.getElementById("numCakes").value = 1;
+    }
     asideElement = document.getElementsByTagName("aside")[0];
     ingrList = asideElement.getElementsByTagName("li");
     for (i = 0; i < ingrList.length; i++) {
@@ -54,27 +58,3 @@ window.onload = function () {
         }
     }
 };
-// source http://api.jquery.com/hover/
-$(document).ready(function () {
-/*    $(".votingStars span").hover(
-        function () {
-            $(this).prevAll().text("\u2605");
-            $(this).text("\u2605");
-        }, function () {
-            $(this).prevAll().text("\u2606");
-            $(this).text("\u2606");
-        }
-    );*/
-    
-    $(".votingStars span").click(
-        function () {
-            $(this).prevAll().text("\u2605");
-            $(this).text("\u2605");
-            $(this).nextAll().text("\u2606");
-            
-            $(this).animate({fontSize: '5em'}, "slow");
-            $(this).animate({fontSize: '1em'}, "slow");
-        }
-    );
-    
-});
