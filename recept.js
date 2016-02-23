@@ -1,5 +1,4 @@
 var baseIngr = [];
-// var cakeCount;
 
 function setLocalCakeCount() {
     "use strict";

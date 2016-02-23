@@ -40,6 +40,16 @@ $(document).ready(function () {
             putVoteInDB(rating);
         }
     );
+     
+    $(".votingStars span").hover(function(){
+        $(this).prevAll().css("color", "red");
+        $(this).css("color", "red");
+        
+    }, function(){
+        $(this).prevAll().css("color", "black");
+        $(this).css("color", "black");
+    });
+    
     updateVotingResult();    
 });
 
