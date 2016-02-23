@@ -6,6 +6,11 @@ header {
     text-transform: uppercase;
 }   
 
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
 h1 {
     font-size:3em;
     text-align:center;
@@ -58,7 +63,7 @@ article {
     width: 50%;
     padding-left: 5%;
 }
-}
+
 
 aside h2 {
     font-size:1.5em;
@@ -103,4 +108,20 @@ li {
 
 #wait {
     text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    aside {
+        float: none;
+        width: 100%;
+        padding-left: 25%;
+        text-align: left;
+    }
+
+    article {
+        float: none;
+        width: 100%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
 }
