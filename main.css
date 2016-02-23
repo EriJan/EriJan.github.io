@@ -38,8 +38,8 @@ img {
 }
 
 nav {
-    float: right;
-    text-align:left;
+    float: center;    
+    text-align:center;
     padding-left: 0%;
     padding-right: 5%;
 }
