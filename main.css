@@ -38,16 +38,21 @@ img {
 }
 
 nav {
-    text-align:center;
+    float: left;
+    text-align:left;
+    padding-right: 5%;
+    padding-right: 1%;
 }
 
 aside {
     float: left;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 article {
     float: left;
-    width: 50%;
+    width: 50%;  
 }
 
 aside h2 {
