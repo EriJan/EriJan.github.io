@@ -1,4 +1,8 @@
 
+// Key 7cd7a288a851a28b
+// GET https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta
+// GET https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta&rating=4
+
 function updateVotingResult () {
     $.ajax({
         method: "GET",
@@ -7,12 +11,9 @@ function updateVotingResult () {
             //return data;
             var rating = data.rating.toFixed(1);
             $(".rating strong").text(rating);
+            $(".rating em").text(data.votes);
         },
     });
-    //return votingResult.success();
-    /*var votResult = getVotingResult.success;
-    var votRate = votResult.responseJSON.rating;
-    $(".rating strong").text(votRate);*/
 }
     
 function putVoteInDB (rating) {
@@ -25,10 +26,6 @@ function putVoteInDB (rating) {
     });
 }
 
-
-    
-
-// source http://api.jquery.com/hover/
 $(document).ready(function () {
     $(".votingStars span").click(
         function () {
@@ -36,21 +33,20 @@ $(document).ready(function () {
             $(this).text("\u2605");
             $(this).nextAll().text("\u2606");
             
-            $(this).animate({fontSize: '5em'}, "slow");
+            $(this).animate({fontSize: '2em'}, "slow");
             $(this).animate({fontSize: '1em'}, "slow");
             
             var rating = $(this).index() + 1;
             putVoteInDB(rating);
         }
     );
-    
-    updateVotingResult();
-    
+    updateVotingResult();    
 });
 
+$(document).ajaxStart(function(){
+     $("#wait").html("<img src='wait.gif'>");
+});
 
-
-
-// Key 7cd7a288a851a28b
-// GET https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta
-// GET https://edu.oscarb.se/sjk15/api/recipe/?api_key=7cd7a288a851a28b&recipe=mazarint%C3%A5rta&rating=4
+$(document).ajaxComplete(function(){
+     $("#wait").html("");
+});

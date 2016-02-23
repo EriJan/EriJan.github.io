@@ -41,8 +41,13 @@ nav {
     text-align:center;
 }
 
-aside, article {
+aside {
     float: left;
+}
+
+article {
+    float: left;
+    width: 50%;
 }
 
 aside h2 {
@@ -78,10 +83,14 @@ li {
 }
 
 .rating {
-    font-size:3em;
+    font-size:1em;
     text-align:center;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 0px;
     margin-left: 0px;
+}
+
+#wait {
+    text-align: center;
 }
