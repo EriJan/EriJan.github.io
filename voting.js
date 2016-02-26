@@ -12,6 +12,7 @@ function updateVotingResult () {
             var rating = data.rating.toFixed(1);
             $(".rating strong").text(rating);
             $(".rating em").text(data.votes);
+            $("#wait").html("");
         },
     });
 }
@@ -57,6 +58,8 @@ $(document).ajaxStart(function(){
      $("#wait").html("<img src='wait.gif'>");
 });
 
-$(document).ajaxComplete(function(){
+// This function seems to be triggerd prematurely, moved to update voting.
+/*$(document).ajaxComplete(function(){
      $("#wait").html("");
 });
+*/
